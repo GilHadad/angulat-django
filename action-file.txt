@@ -1,0 +1,36 @@
+https://docs.python-guide.org/dev/virtualenvs/
+https://www.techiediaries.com/django-angular-cli/
+https://www.techiediaries.com/tutorial-django-rest-framework-building-products-manager-api/
+
+=========
+== BE: ==
+=========
+mkdir django-angular-app
+cd django-angular-app
+virtualenv pythonEnv
+pythonEnv\Scripts\activate
+
+pip install django
+pip install djangorestframework
+pip freeze > pythonRequirements.txt
+
+django-admin.py startproject server
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
+for creating new app:
+python manage.py startapp api_public
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+
+
+
+=========
+== UI: ==
+=========
+npm install -g @angular/cli
+ng new client-angular
